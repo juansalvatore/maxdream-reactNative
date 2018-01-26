@@ -2,8 +2,8 @@
 
 ### Process 
 
-- [x] fragment information into reusable components
+- [x] Fragment information into reusable components
 
-- [ ] sketch wireframes 
+- [ ] Create simple wireframes with Balsamiq Mockups 3
 
 <img src="https://image.ibb.co/jJxUww/HOTELES.png" alt="HOTELES" border="0">
