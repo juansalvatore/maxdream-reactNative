@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View, Image } from 'react-native'
 
-const ImageBanner = ({ image }) => {
+const Services = ({ image }) => {
   const { viewStyle, thumbnailStyle } = styles
   return (
     <View style={viewStyle}>
@@ -24,14 +24,13 @@ const styles = {
     marginRight: 5,
     marginLeft: 5,
     elevation: 3,
-    height: 360,
+    height: 300,
   },
 
   thumbnailStyle: {
     flex: 1,
-    width: 820,
-    resizeMode: 'contain',
+    width: 318,
   },
 }
 
-export default ImageBanner
+export default Services

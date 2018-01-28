@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View, Image } from 'react-native'
 
-const ImageBanner = ({ image }) => {
+const Hotel = ({ image }) => {
   const { viewStyle, thumbnailStyle } = styles
   return (
     <View style={viewStyle}>
@@ -12,7 +12,7 @@ const ImageBanner = ({ image }) => {
 
 const styles = {
   viewStyle: {
-    flex: 1,
+    flex: 1.3,
     borderWidth: 1,
     borderRadius: 2,
     borderColor: '#ddd',
@@ -24,14 +24,13 @@ const styles = {
     marginRight: 5,
     marginLeft: 5,
     elevation: 3,
-    height: 360,
+    height: 300,
   },
 
   thumbnailStyle: {
     flex: 1,
-    width: 820,
-    resizeMode: 'contain',
+    width: 410,
   },
 }
 
-export default ImageBanner
+export default Hotel

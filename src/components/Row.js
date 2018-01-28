@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View, Image } from 'react-native'
 
-const InfoSection = ({ children }) => {
+const Row = ({ children }) => {
   const { containerStyle } = styles
 
   return <View style={containerStyle}>{children}</View>
@@ -18,4 +18,4 @@ const styles = {
   },
 }
 
-export default InfoSection
+export default Row
