@@ -22,12 +22,13 @@ const styles = {
     marginTop: 10,
     marginRight: 10,
     marginLeft: 10,
-    height: 300,
     elevation: 3,
+    height: 300,
   },
 
   thumbnailStyle: {
     flex: 1,
+    width: 820,
   },
 }
 
