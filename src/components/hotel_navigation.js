@@ -36,13 +36,21 @@ class HotelNavigation extends Component {
   }
 
   render() {
-    return <Row>{this.renderHotelList()}</Row>
+    return (
+      <View style={styles.viewStyle}>
+        <Row>{this.renderHotelList()}</Row>
+      </View>
+    )
   }
 }
 
 const styles = {
   touchableOpacityStyle: {
     flex: 1,
+  },
+  viewStyle: {
+    marginLeft: 5,
+    marginRight: 5,
   },
 }
 export default HotelNavigation

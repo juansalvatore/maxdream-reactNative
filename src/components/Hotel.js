@@ -29,7 +29,7 @@ const styles = {
 
   thumbnailStyle: {
     flex: 1,
-    width: 410,
+    width: 440,
   },
 }
 

@@ -23,17 +23,15 @@ const styles = {
     shadowRadius: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 5,
     marginRight: 5,
     marginLeft: 5,
     elevation: 3,
-    height: 360,
+    height: 300,
   },
 
   thumbnailStyle: {
     flex: 1,
     width: 820,
-    resizeMode: 'contain',
   },
 }
 

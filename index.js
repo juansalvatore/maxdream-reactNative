@@ -12,79 +12,79 @@ import InfoBox from './src/components/info_box'
 
 const App = () => {
   return (
-    <ScrollView contentContainerStyle={styles.contentContainer}>
-      {/* top bar color and style */}
-      <StatusBar
-        backgroundColor="rgba(11,92,148,0.8)"
-        barStyle="light-content"
-      />
-
-      {/* top hotel navigation */}
-      <HotelNavigation
-        hotels={[
-          { id: 'hotel-1', name: 'Hotel 1' },
-          { id: 'hotel-2', name: 'Hotel 2' },
-          { id: 'hotel-3', name: 'Hotel 3' },
-          { id: 'hotel-4', name: 'Hotel 4' },
-          { id: 'hotel-5', name: 'Hotel 5' },
-        ]}
-      />
-
-      {/* hotel + services */}
-      <Row>
-        <Hotel image={require('./src/assets/img/hotel.png')} />
-        <Services image={require('./src/assets/img/services.png')} />
-      </Row>
-
-      {/* images banners */}
-      <ImageBanner image={require('./src/assets/img/concorde-1.png')} />
-      <ImageBanner image={require('./src/assets/img/concorde-2.png')} />
-      <ImageBanner image={require('./src/assets/img/concorde-3.png')} />
-      <ImageBanner image={require('./src/assets/img/concorde-4.png')} />
-      <ImageBanner image={require('./src/assets/img/concorde-5.png')} />
-
-      {/* info sections with three or two info boxes */}
-      <Row>
-        <InfoBox
-          image={require('./src/assets/img/infoBox.jpg')}
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    <View>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        {/* top bar color and style */}
+        <StatusBar
+          backgroundColor="rgba(11,92,148,0.8)"
+          barStyle="light-content"
         />
-        <InfoBox
-          image={require('./src/assets/img/infoBox.jpg')}
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+
+        {/* top hotel navigation */}
+        <HotelNavigation
+          hotels={[
+            { id: 'hotel-1', name: 'Eco Sky' },
+            { id: 'hotel-2', name: 'Hotel Piedras' },
+            { id: 'hotel-3', name: 'Grand Hotel Bariloche' },
+            { id: 'hotel-4', name: 'Hotel Nevada' },
+            { id: 'hotel-5', name: 'Hotel Concorde' },
+          ]}
+        />
+
+        {/* hotel + services */}
+        <Row>
+          <Hotel image={require('./src/assets/img/bannerImage.jpg')} />
+          <Services image={require('./src/assets/img/bannerImage.jpg')} />
+        </Row>
+
+        {/* images banners */}
+        <ImageBanner image={require('./src/assets/img/bannerImage.jpg')} />
+        <ImageBanner image={require('./src/assets/img/bannerImage.jpg')} />
+        <ImageBanner image={require('./src/assets/img/bannerImage.jpg')} />
+
+        {/* info sections with three or two info boxes */}
+        <Row>
+          <InfoBox
+            image={require('./src/assets/img/infoBox.jpg')}
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          />
+          <InfoBox
+            image={require('./src/assets/img/infoBox.jpg')}
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat."
-        />
-        <InfoBox
-          image={require('./src/assets/img/infoBox.jpg')}
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          />
+          <InfoBox
+            image={require('./src/assets/img/infoBox.jpg')}
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur."
-        />
-      </Row>
+          />
+        </Row>
 
-      <ImageBanner image={require('./src/assets/img/bannerImage.jpg')} />
+        <ImageBanner image={require('./src/assets/img/bannerImage.jpg')} />
 
-      <Row>
-        <InfoBox
-          image={require('./src/assets/img/infoBox.jpg')}
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        <Row>
+          <InfoBox
+            image={require('./src/assets/img/infoBox.jpg')}
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-        />
-        <InfoBox
-          image={require('./src/assets/img/infoBox.jpg')}
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          />
+          <InfoBox
+            image={require('./src/assets/img/infoBox.jpg')}
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat."
-        />
-      </Row>
-    </ScrollView>
+          />
+        </Row>
+      </ScrollView>
+    </View>
   )
 }
 

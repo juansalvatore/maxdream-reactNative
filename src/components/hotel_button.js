@@ -29,6 +29,7 @@ const styles = {
   activeText: {
     color: 'white',
     fontWeight: '800',
+    textAlign: 'center',
   },
   buttonText: {},
 }
