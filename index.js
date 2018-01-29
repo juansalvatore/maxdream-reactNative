@@ -1,6 +1,6 @@
 // importing react and react native
 import React, { Component } from 'react'
-import { View, AppRegistry, ScrollView } from 'react-native'
+import { View, AppRegistry, ScrollView, StatusBar } from 'react-native'
 
 // components
 import HotelNavigation from './src/components/hotel_navigation'
@@ -13,6 +13,12 @@ import InfoBox from './src/components/info_box'
 const App = () => {
   return (
     <ScrollView contentContainerStyle={styles.contentContainer}>
+      {/* top bar color and style */}
+      <StatusBar
+        backgroundColor="rgba(11,92,148,0.8)"
+        barStyle="light-content"
+      />
+
       {/* top hotel navigation */}
       <HotelNavigation
         hotels={[
