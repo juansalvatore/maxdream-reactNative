@@ -1,12 +1,15 @@
 import React from 'react'
 import { Text, View, Image } from 'react-native'
 
+import Row from './Row'
 const ImageBanner = ({ image }) => {
   const { viewStyle, thumbnailStyle } = styles
   return (
-    <View style={viewStyle}>
-      <Image style={thumbnailStyle} source={image} />
-    </View>
+    <Row>
+      <View style={viewStyle}>
+        <Image style={thumbnailStyle} source={image} />
+      </View>
+    </Row>
   )
 }
 

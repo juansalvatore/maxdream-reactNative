@@ -13,35 +13,30 @@ import InfoBox from './src/components/info_box'
 const App = () => {
   return (
     <ScrollView contentContainerStyle={styles.contentContainer}>
+      {/* top hotel navigation */}
       <HotelNavigation
         hotels={[
-          { id: 'hotel-1', name: 'hotel 1' },
-          { id: 'hotel-2', name: 'hotel 2' },
-          { id: 'hotel-3', name: 'hotel 3' },
-          { id: 'hotel-4', name: 'hotel 4' },
-          { id: 'hotel-5', name: 'hotel 5' },
+          { id: 'hotel-1', name: 'Hotel 1' },
+          { id: 'hotel-2', name: 'Hotel 2' },
+          { id: 'hotel-3', name: 'Hotel 3' },
+          { id: 'hotel-4', name: 'Hotel 4' },
+          { id: 'hotel-5', name: 'Hotel 5' },
         ]}
       />
 
+      {/* hotel + services */}
       <Row>
         <Hotel image={require('./src/assets/img/hotel.png')} />
         <Services image={require('./src/assets/img/services.png')} />
       </Row>
-      <Row>
-        <ImageBanner image={require('./src/assets/img/concorde-1.png')} />
-      </Row>
-      <Row>
-        <ImageBanner image={require('./src/assets/img/concorde-2.png')} />
-      </Row>
-      <Row>
-        <ImageBanner image={require('./src/assets/img/concorde-3.png')} />
-      </Row>
-      <Row>
-        <ImageBanner image={require('./src/assets/img/concorde-4.png')} />
-      </Row>
-      <Row>
-        <ImageBanner image={require('./src/assets/img/concorde-5.png')} />
-      </Row>
+
+      {/* images banners */}
+      <ImageBanner image={require('./src/assets/img/concorde-1.png')} />
+      <ImageBanner image={require('./src/assets/img/concorde-2.png')} />
+      <ImageBanner image={require('./src/assets/img/concorde-3.png')} />
+      <ImageBanner image={require('./src/assets/img/concorde-4.png')} />
+      <ImageBanner image={require('./src/assets/img/concorde-5.png')} />
+
       {/* info sections with three or two info boxes */}
       <Row>
         <InfoBox
@@ -66,9 +61,8 @@ const App = () => {
           pariatur."
         />
       </Row>
-      <Row>
-        <ImageBanner image={require('./src/assets/img/bannerImage.jpg')} />
-      </Row>
+
+      <ImageBanner image={require('./src/assets/img/bannerImage.jpg')} />
 
       <Row>
         <InfoBox
