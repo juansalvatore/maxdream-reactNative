@@ -12,78 +12,31 @@ class HotelNavigation extends Component {
     }
   }
 
-  renderHotelButtons = (touchableOpacityStyle, activeButton) => {
-    return (
-      <Row>
-        <TouchableOpacity
-          style={touchableOpacityStyle}
-          onPress={() => {
-            this.setState({ activeButton: 'hotel-1' })
-          }}
-        >
-          <HotelButton
-            id="hotel-1"
-            active={activeButton == 'hotel-1' ? true : null}
-          >
-            {this.props.hotels.name}
-          </HotelButton>
-        </TouchableOpacity>
+  renderHotelList = () => {
+    const { activeButton } = this.state
+    const { touchableOpacityStyle } = styles
+    const intitialHotelArray = this.props.hotels
 
-        <TouchableOpacity
-          style={touchableOpacityStyle}
-          onPress={() => {
-            this.setState({ activeButton: 'hotel-2' })
-          }}
+    return (hotelsList = intitialHotelArray.map(hotel => (
+      <TouchableOpacity
+        key={hotel.name}
+        style={touchableOpacityStyle}
+        onPress={() => {
+          this.setState({ activeButton: hotel.id })
+        }}
+      >
+        <HotelButton
+          id="hotel-1"
+          active={activeButton == hotel.id ? true : null}
         >
-          <HotelButton
-            style={touchableOpacityStyle}
-            id="hotel-2"
-            active={activeButton == 'hotel-2' ? true : null}
-          >
-            Hotel 2
-          </HotelButton>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={touchableOpacityStyle}
-          onPress={() => {
-            this.setState({ activeButton: 'hotel-3' })
-          }}
-        >
-          <HotelButton
-            id="hotel-3"
-            active={activeButton == 'hotel-3' ? true : null}
-          >
-            Hotel 3
-          </HotelButton>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={touchableOpacityStyle}
-          onPress={() => {
-            this.setState({ activeButton: 'hotel-4' })
-          }}
-        >
-          <HotelButton
-            id="hotel-4"
-            active={activeButton == 'hotel-4' ? true : null}
-          >
-            Hotel 4
-          </HotelButton>
-        </TouchableOpacity>
-      </Row>
-    )
+          {hotel.name}
+        </HotelButton>
+      </TouchableOpacity>
+    )))
   }
 
   render() {
-    const { activeButton } = this.state
-    const { touchableOpacityStyle } = styles
-
-    return (
-      <View>
-        {this.renderHotelButtons(touchableOpacityStyle, activeButton)}
-      </View>
-    )
+    return <Row>{this.renderHotelList()}</Row>
   }
 }
 

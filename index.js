@@ -13,7 +13,15 @@ import InfoBox from './src/components/info_box'
 const App = () => {
   return (
     <ScrollView contentContainerStyle={styles.contentContainer}>
-      <HotelNavigation hotels={{ id: 'hotel-1', name: 'hotel 1' }} />
+      <HotelNavigation
+        hotels={[
+          { id: 'hotel-1', name: 'hotel 1' },
+          { id: 'hotel-2', name: 'hotel 2' },
+          { id: 'hotel-3', name: 'hotel 3' },
+          { id: 'hotel-4', name: 'hotel 4' },
+          { id: 'hotel-5', name: 'hotel 5' },
+        ]}
+      />
 
       <Row>
         <Hotel image={require('./src/assets/img/hotel.png')} />
