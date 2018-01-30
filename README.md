@@ -16,7 +16,7 @@
 
 - - [x] Image banner
 
-- - [x] Image + text
+- - [x] Image + text
 
 - - [x] Hotel + Services 
 
