@@ -1,15 +1,16 @@
 import React from 'react'
 import { Text, View, Image } from 'react-native'
 
-const InfoBox = ({ image, text }) => {
-  const { containerStyle, boxStyle, imageStyle } = styles
+const InfoBox = ({ image, text, children }) => {
+  const { containerStyle, boxStyle, imageStyle, textContainer } = styles
 
   return (
     <View style={boxStyle}>
       <Image style={imageStyle} source={image} />
-      <View>
+      <View style={textContainer}>
         <Text>{text}</Text>
       </View>
+      <View>{children}</View>
     </View>
   )
 }
@@ -23,7 +24,6 @@ const styles = {
     backgroundColor: 'white',
     shadowRadius: 2,
     justifyContent: 'center',
-    alignItems: 'center',
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 10,
@@ -33,6 +33,10 @@ const styles = {
   },
   imageStyle: {
     height: 200,
+    marginBottom: 15,
+    alignSelf: 'center',
+  },
+  textContainer: {
     marginBottom: 10,
   },
 }
