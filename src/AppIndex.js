@@ -3,14 +3,14 @@ import React, { Component } from 'react'
 import { View, AppRegistry, ScrollView, StatusBar } from 'react-native'
 
 // components
-import HotelNavigation from './components/hotel_navigation'
+import DynamicHotelNavigation from './components/hotel_navigation_dynamic'
 import Hotel from './components/Hotel.js'
 import Services from './components/Services.js'
 import ImageBanner from './components/image_banner'
 import Row from './components/Row.js'
 import InfoBox from './components/info_box'
 
-const App = () => {
+const HotelsIndex = () => {
   return (
     <View>
       <ScrollView contentContainerStyle={styles.contentContainer}>
@@ -21,13 +21,10 @@ const App = () => {
         />
 
         {/* top hotel navigation */}
-        <HotelNavigation
+        <DynamicHotelNavigation
           hotels={[
-            { id: 'hotel-1', name: 'Eco Sky', key: 'appOne' },
-            { id: 'hotel-2', name: 'Hotel Piedras', key: 'appTwo' },
-            { id: 'hotel-3', name: 'Grand Hotel Bariloche' },
-            { id: 'hotel-4', name: 'Hotel Nevada' },
-            { id: 'hotel-5', name: 'Hotel Concorde' },
+            { id: '1', name: 'Hoteles', key: '1' },
+            { id: '2', name: 'Fiestas', key: '2' },
           ]}
         />
       </ScrollView>
@@ -42,4 +39,4 @@ const styles = {
 }
 
 // register app
-export default App
+export default HotelsIndex

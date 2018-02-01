@@ -27,7 +27,7 @@ class HotelNavigation extends Component {
         onPress={() => {
           this.setState({ activeButton: hotel.id })
           // let function = 'Action.' + go + '()'
-          Actions.appTwo()
+          Actions.HotelsIndex()
         }}
       >
         <HotelButton

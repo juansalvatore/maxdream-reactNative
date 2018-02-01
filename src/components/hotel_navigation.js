@@ -12,7 +12,7 @@ class HotelNavigation extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      activeButton: 'hotel-1',
+      activeButton: 'hotel',
     }
   }
   render() {
@@ -37,7 +37,7 @@ class HotelNavigation extends Component {
               onPress={() => {
                 this.setState({ activeButton: 'hotel-1' })
                 // let function = 'Action.' + go + '()'
-                Actions.appTwo()
+                Actions.HotelOne()
               }}
             >
               <HotelButton
@@ -58,14 +58,14 @@ class HotelNavigation extends Component {
               key="Eco Sky"
               style={touchableOpacityStyle}
               onPress={() => {
-                this.setState({ activeButton: 'hotel-1' })
+                this.setState({ activeButton: 'hotel-2' })
                 // let function = 'Action.' + go + '()'
-                Actions.appTwo()
+                Actions.HotelOne()
               }}
             >
               <HotelButton
                 id="hotel-1"
-                active={activeButton == 'hotel-1' ? true : null}
+                active={activeButton == 'hotel-2' ? true : null}
               >
                 Eco Sky
               </HotelButton>
@@ -81,14 +81,14 @@ class HotelNavigation extends Component {
               key="Eco Sky"
               style={touchableOpacityStyle}
               onPress={() => {
-                this.setState({ activeButton: 'hotel-1' })
+                this.setState({ activeButton: 'hotel-3' })
                 // let function = 'Action.' + go + '()'
-                Actions.appTwo()
+                Actions.HotelOne()
               }}
             >
               <HotelButton
                 id="hotel-1"
-                active={activeButton == 'hotel-1' ? true : null}
+                active={activeButton == 'hotel-3' ? true : null}
               >
                 Eco Sky
               </HotelButton>

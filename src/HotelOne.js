@@ -10,7 +10,7 @@ import ImageBanner from './components/image_banner'
 import Row from './components/Row.js'
 import InfoBox from './components/info_box'
 
-const AppTwo = () => {
+const HotelOne = () => {
   return (
     <View>
       <ScrollView contentContainerStyle={styles.contentContainer}>
@@ -68,4 +68,4 @@ const styles = {
 }
 
 // register app
-export default AppTwo
+export default HotelOne
