@@ -6,6 +6,15 @@ class Carousel extends Component {
   onClickSomething() {
     this.carousel.goToPage(2)
   }
+  renderPages = () => {
+    const { boxStyle } = styles
+    const items = this.props.items
+    return (list = items.map(element => (
+      <View style={boxStyle} key={element.key}>
+        <Image style={{ flex: 1 }} source={element.image} />
+      </View>
+    )))
+  }
 
   render() {
     const { boxStyle } = styles
@@ -20,30 +29,7 @@ class Carousel extends Component {
           pageSpacing={10}
           containerPadding={30} // se puede usar para hacer el carousel mas chico y que sirva tanto como banner o como info_box
         >
-          <View style={boxStyle} key={'page0'}>
-            <Image
-              style={{ flex: 1 }}
-              source={require('../assets/img/bannerImage.jpg')}
-            />
-          </View>
-          <View style={boxStyle} key={'page1'}>
-            <Image
-              style={{ flex: 1 }}
-              source={require('../assets/img/bannerImage.jpg')}
-            />
-          </View>
-          <View style={boxStyle} key={'page2'}>
-            <Image
-              style={{ flex: 1 }}
-              source={require('../assets/img/bannerImage.jpg')}
-            />
-          </View>
-          <View style={boxStyle} key={'page2'}>
-            <Image
-              style={{ flex: 1 }}
-              source={require('../assets/img/bannerImage.jpg')}
-            />
-          </View>
+          {this.renderPages()}
         </CarouselPager>
       </View>
     )

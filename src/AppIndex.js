@@ -21,7 +21,13 @@ const HotelsIndex = () => {
           barStyle="light-content"
         />
         <Row>
-          <Carousel />
+          <Carousel
+            items={[
+              { key: 'page0', image: require('./assets/img/bannerImage.jpg') },
+              { key: 'page2', image: require('./assets/img/bannerImage.jpg') },
+              { key: 'page3', image: require('./assets/img/bannerImage.jpg') },
+            ]}
+          />
         </Row>
 
         {/* top hotel navigation */}
