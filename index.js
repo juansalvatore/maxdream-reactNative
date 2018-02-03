@@ -13,14 +13,9 @@ const Index = () => {
     <Router>
       <Scene key="root">
         <Scene key="HotelsIndex" component={HotelsIndex} title="Hoteles" />
-        <Scene key="HotelOne" component={HotelOne} title="Hotel nro 1" />
-        <Scene key="AppIndex" component={AppIndex} title="" />
-        <Scene
-          key="videoComponent"
-          component={VideoComponent}
-          title="Video"
-          initial
-        />
+        <Scene key="HotelOne" component={HotelOne} title="" />
+        <Scene key="AppIndex" component={AppIndex} title="" initial />
+        <Scene key="videoComponent" component={VideoComponent} title="Video" />
       </Scene>
     </Router>
   )

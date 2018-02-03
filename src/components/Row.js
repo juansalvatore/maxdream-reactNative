@@ -1,6 +1,8 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
+// usar row englobando cada componente salvo el image_banner que ya ocupa toda la row
+
 const Row = ({ children }) => {
   const { containerStyle } = styles
 

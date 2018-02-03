@@ -9,6 +9,7 @@ import Services from './components/Services.js'
 import ImageBanner from './components/image_banner'
 import Row from './components/Row.js'
 import InfoBox from './components/info_box'
+import Carousel from './components/Carousel'
 
 const HotelsIndex = () => {
   return (
@@ -19,12 +20,16 @@ const HotelsIndex = () => {
           backgroundColor="rgba(11,92,148,0.8)"
           barStyle="light-content"
         />
+        <Row>
+          <Carousel />
+        </Row>
 
         {/* top hotel navigation */}
         <DynamicHotelNavigation
           hotels={[
             { id: '1', name: 'Hoteles', key: '1' },
             { id: '2', name: 'Fiestas', key: '2' },
+            { id: '3', name: '3', key: '3' },
           ]}
         />
       </ScrollView>
