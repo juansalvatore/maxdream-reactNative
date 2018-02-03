@@ -4,8 +4,10 @@ import { Text, View, Image, TouchableOpacity } from 'react-native'
 const HotelButton = ({ children, active, id }) => {
   const { buttonContainer, buttonText, activeButton, activeText } = styles
   return (
-    <View style={[buttonContainer, active && activeButton]}>
-      <Text style={[buttonText, active && activeText]}>{children}</Text>
+    <View style={{ flexDirection: 'row' }}>
+      <TouchableOpacity style={[buttonContainer, active && activeButton]}>
+        <Text style={[buttonText, active && activeText]}>{children}</Text>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -20,7 +22,7 @@ const styles = {
     shadowRadius: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    height: 70,
+    height: 50,
     padding: 5,
   },
   activeButton: {
