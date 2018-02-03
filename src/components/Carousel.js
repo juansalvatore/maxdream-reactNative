@@ -20,7 +20,7 @@ class Carousel extends Component {
     const { boxStyle } = styles
 
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ height: 300 }}>
         <CarouselPager
           ref={ref => (this.carousel = ref)}
           initialPage={0}

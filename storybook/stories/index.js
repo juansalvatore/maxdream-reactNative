@@ -18,31 +18,59 @@ import Button from '../../src/components/Button'
 import HotelButton from '../../src/components/hotel_button'
 import SquareButton from '../../src/components/square_button'
 
+storiesOf('Maxdream', module).add('documentación UI', () => (
+  <Welcome showApp={linkTo('Button')} />
+))
+
+storiesOf('Banner', module)
+  .add('carousel', () => (
+    <View>
+      <View style={{ marginTop: 250 }} />
+      <Carousel
+        items={[
+          {
+            key: 'page0',
+            image: require('../../src/assets/img/bannerImage.jpg'),
+          },
+          {
+            key: 'page2',
+            image: require('../../src/assets/img/bannerImage.jpg'),
+          },
+          {
+            key: 'page3',
+            image: require('../../src/assets/img/bannerImage.jpg'),
+          },
+        ]}
+      />
+    </View>
+  ))
+  .add('full image banner', () => (
+    <View>
+      <View style={{ marginTop: 250 }} />
+      <FullImageBanner
+        image={require('../../src/assets/img/bannerImage.jpg')}
+      />
+    </View>
+  ))
+  .add('image banner', () => (
+    <View>
+      <View style={{ marginTop: 250 }} />
+      <ImageBanner image={require('../../src/assets/img/bannerImage.jpg')} />
+    </View>
+  ))
+
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('simple round button', () => (
+  .add('button', () => (
     <Button onPress={action('clicked-text')}>
       <Text>BUTTON TEXT</Text>
     </Button>
   ))
-  .add('simple square button', () => (
+  .add('square button', () => (
     <SquareButton onPress={action('clicked-text')}>
       <Text>BUTTON TEXT</Text>
     </SquareButton>
   ))
-
-storiesOf('Banner', module)
-  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('full image banner', () => (
-    <FullImageBanner image={require('../../src/assets/img/bannerImage.jpg')} />
-  ))
-  .add('image banner', () => (
-    <ImageBanner image={require('../../src/assets/img/bannerImage.jpg')} />
-  ))
-
-storiesOf('Maxdream', module).add('documentación UI', () => (
-  <Welcome showApp={linkTo('Button')} />
-))
 
 storiesOf('Info', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
