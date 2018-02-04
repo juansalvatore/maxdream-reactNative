@@ -24,7 +24,10 @@ IndexElement = props => {
           </View>
           <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
           <View style={rightContainer}>
-            <Text>Icon</Text>
+            <Text>1 - Lorem Ipsum lorem</Text>
+            <Text>2 - Lorem Ipsum lorem</Text>
+            <Text>3 - Lorem Ipsum lorem</Text>
+            <Text>4 - Lorem Ipsum lorem</Text>
           </View>
         </View>
 
@@ -34,10 +37,10 @@ IndexElement = props => {
           </View>
           <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
           <View style={rightContainer}>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
+            <Text>1 - Lorem Ipsum lorem</Text>
+            <Text>2 - Lorem Ipsum lorem</Text>
+            <Text>3 - Lorem Ipsum lorem</Text>
+            <Text>4 - Lorem Ipsum lorem</Text>
           </View>
         </View>
 
@@ -47,24 +50,25 @@ IndexElement = props => {
           </View>
           <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
           <View style={rightContainer}>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
+            <Text>1 - Lorem Ipsum lorem</Text>
+            <Text>2 - Lorem Ipsum lorem</Text>
+            <Text>3 - Lorem Ipsum lorem</Text>
+            <Text>4 - Lorem Ipsum lorem</Text>
           </View>
         </View>
       </View>
       <View>
         <View style={containerStyle}>
           <View style={leftContainer}>
-            <Icon name="male" size={size} color="black" />
+            <Icon name="paper-plane-o" size={size} color="black" />
+            {/* <Icon name="male" size={size} color="black" /> */}
           </View>
           <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
           <View style={rightContainer}>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
+            <Text>1 - Lorem Ipsum lorem</Text>
+            <Text>2 - Lorem Ipsum lorem</Text>
+            <Text>3 - Lorem Ipsum lorem</Text>
+            <Text>4 - Lorem Ipsum lorem</Text>
           </View>
         </View>
 
@@ -74,25 +78,25 @@ IndexElement = props => {
           </View>
           <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
           <View style={rightContainer}>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
+            <Text>1 - Lorem Ipsum lorem</Text>
+            <Text>2 - Lorem Ipsum lorem</Text>
+            <Text>3 - Lorem Ipsum lorem</Text>
+            <Text>4 - Lorem Ipsum lorem</Text>
           </View>
         </View>
 
         <View style={containerStyle}>
           <View style={leftContainer}>
             <Icon name="leaf" size={size} color="black" />
-            <Icon name="safari" size={size} color="black" />
-            <Icon name="paper-plane-o" size={size} color="black" />
+            {/* <Icon name="safari" size={size} color="black" />
+            <Icon name="paper-plane-o" size={size} color="black" /> */}
           </View>
           <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
           <View style={rightContainer}>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
-            <Text>Icon</Text>
+            <Text>1 - Lorem Ipsum lorem</Text>
+            <Text>2 - Lorem Ipsum lorem</Text>
+            <Text>3 - Lorem Ipsum lorem</Text>
+            <Text>4 - Lorem Ipsum lorem</Text>
           </View>
         </View>
       </View>
@@ -123,10 +127,10 @@ const styles = {
     backgroundColor: 'white',
     borderRadius: 0,
     marginLeft: 25,
-    height: 180,
+    height: 120,
   },
   rightContainer: {
-    flex: 2,
+    flex: 4,
     justifyContent: 'center',
     alignItems: 'center',
   },
