@@ -9,6 +9,7 @@ import CenterView from './CenterView'
 import Welcome from './Welcome'
 
 // imports
+import IndexElement from '../../src/components/index_element'
 import Carousel from '../../src/components/Carousel'
 import ImageBanner from '../../src/components/image_banner'
 import FullImageBanner from '../../src/components/full_image_banner'
@@ -17,6 +18,10 @@ import Row from '../../src/components/Row'
 import Button from '../../src/components/Button'
 import HotelButton from '../../src/components/hotel_button'
 import SquareButton from '../../src/components/square_button'
+
+storiesOf('Index', module)
+  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('index element', () => <IndexElement />)
 
 storiesOf('Maxdream', module).add('documentación UI', () => (
   <Welcome showApp={linkTo('Button')} />
