@@ -1,4 +1,4 @@
-# maxdream-reactNative
+# Maxdream App
 <img src="https://image.ibb.co/buvUib/Captura_de_pantalla_2018_01_28_a_la_s_16_33_34.png" alt="Captura_de_pantalla_2018_01_28_a_la_s_16_33_34" border="0">
 
 ### Process 
