@@ -19,6 +19,10 @@ import Button from '../../src/components/Button'
 import HotelButton from '../../src/components/hotel_button'
 import SquareButton from '../../src/components/square_button'
 
+storiesOf('Maxdream', module).add('documentación UI', () => (
+  <Welcome showApp={linkTo('Button')} />
+))
+
 storiesOf('Banner', module)
   .add('image banner', () => (
     <View>
@@ -26,6 +30,27 @@ storiesOf('Banner', module)
       <ImageBanner image={require('../../src/assets/img/bannerImage.jpg')} />
     </View>
   ))
+  .add('image banner left text', () => (
+    <View>
+      <View style={{ marginTop: 250 }} />
+      <ImageBanner
+        image={require('../../src/assets/img/bannerImage.jpg')}
+        titleLeft="Title"
+        paragraphLeft="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+      />
+    </View>
+  ))
+  .add('image banner right text', () => (
+    <View>
+      <View style={{ marginTop: 250 }} />
+      <ImageBanner
+        image={require('../../src/assets/img/bannerImage.jpg')}
+        titleRight="Title"
+        paragraphRight="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+      />
+    </View>
+  ))
+
   .add('carousel', () => (
     <View>
       <View style={{ marginTop: 250 }} />
@@ -55,15 +80,29 @@ storiesOf('Banner', module)
       />
     </View>
   ))
+  .add('full image banner title', () => (
+    <View>
+      <View style={{ marginTop: 250 }} />
+      <FullImageBanner
+        image={require('../../src/assets/img/bannerImage.jpg')}
+        title="Main Title"
+      />
+    </View>
+  ))
+  .add('full image banner title + paragraph', () => (
+    <View>
+      <View style={{ marginTop: 250 }} />
+      <FullImageBanner
+        image={require('../../src/assets/img/bannerImage.jpg')}
+        title="Main Title"
+        paragraph="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+      />
+    </View>
+  ))
 
 storiesOf('Index', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('index element', () => <IndexElement />)
-  .add('index element', () => <IndexElement />)
-
-storiesOf('Maxdream', module).add('documentación UI', () => (
-  <Welcome showApp={linkTo('Button')} />
-))
 
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)

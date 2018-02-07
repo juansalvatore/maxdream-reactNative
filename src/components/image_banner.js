@@ -2,7 +2,13 @@ import React from 'react'
 import { Text, View, ImageBackground } from 'react-native'
 
 import Row from './Row'
-const ImageBanner = ({ image }) => {
+const ImageBanner = ({
+  image,
+  titleLeft,
+  titleRight,
+  paragraphLeft,
+  paragraphRight,
+}) => {
   const {
     viewStyle,
     thumbnailStyle,
@@ -16,17 +22,11 @@ const ImageBanner = ({ image }) => {
       <View style={viewStyle}>
         <ImageBackground style={thumbnailStyle} source={image}>
           {/* left text */}
-          <Text style={titleStyleLeft}>TITLE</Text>
-          <Text style={paragraphStyleLeft}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa.
-          </Text>
+          <Text style={titleStyleLeft}>{titleLeft}</Text>
+          <Text style={paragraphStyleLeft}>{paragraphLeft}</Text>
           {/* right text */}
-          <Text style={titleStyleRight}>TITLE</Text>
-          <Text style={paragraphStyleRight}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget.
-          </Text>
+          <Text style={titleStyleRight}>{titleRight}</Text>
+          <Text style={paragraphStyleRight}>{paragraphRight}</Text>
         </ImageBackground>
       </View>
     </Row>
@@ -45,7 +45,7 @@ const styles = {
   paragraphStyleLeft: {
     color: 'white',
     marginLeft: 20,
-    marginBottom: 20,
+    marginBottom: -20,
     fontSize: 18,
     width: 400,
   },
@@ -81,8 +81,8 @@ const styles = {
     alignItems: 'stretch',
     marginRight: 5,
     marginLeft: 5,
-    elevation: 3,
     height: 300,
+    elevation: 3,
   },
 
   thumbnailStyle: {
