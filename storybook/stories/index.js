@@ -19,15 +19,13 @@ import Button from '../../src/components/Button'
 import HotelButton from '../../src/components/hotel_button'
 import SquareButton from '../../src/components/square_button'
 
-storiesOf('Index', module)
-  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('index element', () => <IndexElement />)
-
-storiesOf('Maxdream', module).add('documentación UI', () => (
-  <Welcome showApp={linkTo('Button')} />
-))
-
 storiesOf('Banner', module)
+  .add('image banner', () => (
+    <View>
+      <View style={{ marginTop: 250 }} />
+      <ImageBanner image={require('../../src/assets/img/bannerImage.jpg')} />
+    </View>
+  ))
   .add('carousel', () => (
     <View>
       <View style={{ marginTop: 250 }} />
@@ -57,12 +55,15 @@ storiesOf('Banner', module)
       />
     </View>
   ))
-  .add('image banner', () => (
-    <View>
-      <View style={{ marginTop: 250 }} />
-      <ImageBanner image={require('../../src/assets/img/bannerImage.jpg')} />
-    </View>
-  ))
+
+storiesOf('Index', module)
+  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('index element', () => <IndexElement />)
+  .add('index element', () => <IndexElement />)
+
+storiesOf('Maxdream', module).add('documentación UI', () => (
+  <Welcome showApp={linkTo('Button')} />
+))
 
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
