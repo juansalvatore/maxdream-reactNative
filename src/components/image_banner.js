@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, View, ImageBackground } from 'react-native'
 
 import Row from './Row'
+
 const ImageBanner = ({
   image,
   titleLeft,
@@ -17,6 +18,7 @@ const ImageBanner = ({
     titleStyleRight,
     paragraphStyleRight,
   } = styles
+
   return (
     <Row>
       <View style={viewStyle}>

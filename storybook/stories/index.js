@@ -18,6 +18,15 @@ import Row from '../../src/components/Row'
 import Button from '../../src/components/Button'
 import HotelButton from '../../src/components/hotel_button'
 import SquareButton from '../../src/components/square_button'
+import Card from '../../src/components/Card'
+
+storiesOf('Card', module)
+  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('with Image', () => (
+    <View>
+      <Card />
+    </View>
+  ))
 
 storiesOf('Maxdream', module).add('documentación UI', () => (
   <Welcome showApp={linkTo('Button')} />
@@ -50,7 +59,6 @@ storiesOf('Banner', module)
       />
     </View>
   ))
-
   .add('carousel', () => (
     <View>
       <View style={{ marginTop: 250 }} />
