@@ -84,7 +84,6 @@ const styles = {
     marginRight: 5,
     marginLeft: 5,
     height: 300,
-    elevation: 3,
   },
 
   thumbnailStyle: {

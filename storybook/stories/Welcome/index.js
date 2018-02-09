@@ -10,13 +10,14 @@ export default class Welcome extends React.Component {
       justifyContent: 'center',
     },
     header: {
-      fontSize: 18,
+      fontSize: 35,
+      fontWeight: '700',
       marginBottom: 18,
+      color: 'black',
     },
     content: {
-      fontSize: 12,
+      fontSize: 30,
       marginBottom: 10,
-      lineHeight: 18,
     },
   }
 
@@ -34,8 +35,9 @@ export default class Welcome extends React.Component {
           y React Native. Acá vas a poder chusmear cada componente que cree de
           forma individual y ver como funcionan.
         </Text>
-        <Text style={this.styles.content}>
-          Las Stories están en "storybook/stories/index.js".
+        <Text style={[this.styles.content, { color: '#0b5c94', fontSize: 25 }]}>
+          Para ver como usar cada componente ir a
+          "./storybook/stories/index.js".
         </Text>
       </View>
     )

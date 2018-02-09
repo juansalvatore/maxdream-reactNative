@@ -5,7 +5,7 @@ import Row from './Row'
 
 // usar row englobando cada componente salvo el image_banner que ya ocupa toda la row
 
-const Card = () => {
+const Card = ({ image, title, paragraph }) => {
   const {
     wrapperStyle,
     containerStyle,
@@ -19,16 +19,10 @@ const Card = () => {
     <Row>
       <View style={wrapperStyle}>
         <View style={containerStyle}>
-          <Image
-            style={imageStyle}
-            source={require('../assets/img/bannerImage.jpg')}
-          />
+          <Image style={imageStyle} source={image} />
           <View style={textContainer}>
-            <Text style={titleStyle}>Title</Text>
-            <Text style={paragraphStyle}>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa.
-            </Text>
+            <Text style={titleStyle}>{title}</Text>
+            <Text style={paragraphStyle}>{paragraph}</Text>
           </View>
         </View>
       </View>

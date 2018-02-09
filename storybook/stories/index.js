@@ -20,17 +20,25 @@ import HotelButton from '../../src/components/hotel_button'
 import SquareButton from '../../src/components/square_button'
 import Card from '../../src/components/Card'
 
+storiesOf('Maxdream', module).add('documentación UI', () => (
+  <Welcome showApp={linkTo('Button')} />
+))
+
+storiesOf('Index', module)
+  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('index element', () => <IndexElement />)
+
 storiesOf('Card', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('with Image', () => (
     <View>
-      <Card />
+      <Card
+        image={require('../../src/assets/img/bannerImage.jpg')}
+        title="Title"
+        paragraph="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+      />
     </View>
   ))
-
-storiesOf('Maxdream', module).add('documentación UI', () => (
-  <Welcome showApp={linkTo('Button')} />
-))
 
 storiesOf('Banner', module)
   .add('image banner', () => (
@@ -107,10 +115,6 @@ storiesOf('Banner', module)
       />
     </View>
   ))
-
-storiesOf('Index', module)
-  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('index element', () => <IndexElement />)
 
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
