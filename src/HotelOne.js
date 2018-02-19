@@ -14,6 +14,7 @@ import Carousel from './components/Carousel'
 import SquareButton from './components/square_button'
 import ButtonIcon from './components/Button_icon'
 import CircleIcon from './components/CircleIcon'
+import RoundedCard from './components/RoundedCard'
 
 import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -58,6 +59,14 @@ const HotelOne = () => {
         </ButtonIcon>
 
         <ButtonIcon>TRANSPORTE HIGH CLASS</ButtonIcon>
+
+        <Row>
+          <RoundedCard icon={<Icon name="leaf" size={70} color="white" />}>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum
+            dolor sit amet, consectetuer adipiscing elit.
+          </RoundedCard>
+          <RoundedCard>Parrafo sólo texto</RoundedCard>
+        </Row>
 
         <Card
           image={require('./assets/img/bannerImage.jpg')}
