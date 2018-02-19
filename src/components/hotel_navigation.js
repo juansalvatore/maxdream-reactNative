@@ -4,6 +4,7 @@ import { View, AppRegistry, ScrollView, TouchableOpacity } from 'react-native'
 import HotelButton from './hotel_button'
 import Row from './Row.js'
 import InfoBox from './info_box'
+import Button from './Button'
 
 // import actions to move between views
 import { Actions } from 'react-native-router-flux'
@@ -22,77 +23,41 @@ class HotelNavigation extends Component {
     return (
       <View style={styles.viewStyle}>
         <Row>
+          <InfoBox
+            image={require('../assets/img/bannerImage.jpg')}
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur."
+          >
+            <Button onPress={() => Actions.HotelOne()}>BUTTON TEXT</Button>
+          </InfoBox>
           {/* { id: 'hotel-1', name: 'Eco Sky', key: 'appOne' },
               { id: 'hotel-2', name: 'Hotel Piedras', key: 'appTwo' },
               { id: 'hotel-3', name: 'Grand Hotel Bariloche' },
               { id: 'hotel-4', name: 'Hotel Nevada' },
               { id: 'hotel-5', name: 'Hotel Concorde' }, */}
           <InfoBox
-            image={require('../assets/img/infoBox.jpg')}
-            text="Descripción del hotel"
+            image={require('../assets/img/bannerImage.jpg')}
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur."
           >
-            <TouchableOpacity
-              key="Eco Sky"
-              style={touchableOpacityStyle}
-              onPress={() => {
-                this.setState({ activeButton: 'hotel-1' })
-                // let function = 'Action.' + go + '()'
-                Actions.HotelOne()
-              }}
-            >
-              <HotelButton
-                id="hotel-1"
-                active={activeButton == 'hotel-1' ? true : null}
-              >
-                Eco Sky
-              </HotelButton>
-            </TouchableOpacity>
+            <Button onPress={() => Actions.HotelOne()}>BUTTON TEXT</Button>
           </InfoBox>
 
           <InfoBox
-            image={require('../assets/img/infoBox.jpg')}
+            image={require('../assets/img/bannerImage.jpg')}
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam."
           >
-            <TouchableOpacity
-              key="Eco Sky"
-              style={touchableOpacityStyle}
-              onPress={() => {
-                this.setState({ activeButton: 'hotel-2' })
-                // let function = 'Action.' + go + '()'
-                Actions.HotelOne()
-              }}
-            >
-              <HotelButton
-                id="hotel-1"
-                active={activeButton == 'hotel-2' ? true : null}
-              >
-                Eco Sky
-              </HotelButton>
-            </TouchableOpacity>
-          </InfoBox>
-
-          <InfoBox
-            image={require('../assets/img/infoBox.jpg')}
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          >
-            <TouchableOpacity
-              key="Eco Sky"
-              style={touchableOpacityStyle}
-              onPress={() => {
-                this.setState({ activeButton: 'hotel-3' })
-                // let function = 'Action.' + go + '()'
-                Actions.HotelOne()
-              }}
-            >
-              <HotelButton
-                id="hotel-1"
-                active={activeButton == 'hotel-3' ? true : null}
-              >
-                Eco Sky
-              </HotelButton>
-            </TouchableOpacity>
+            <Button onPress={() => Actions.HotelOne()}>BUTTON TEXT</Button>
           </InfoBox>
         </Row>
       </View>

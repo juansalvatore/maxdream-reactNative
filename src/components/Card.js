@@ -5,7 +5,7 @@ import Row from './Row'
 
 // usar row englobando cada componente salvo el image_banner que ya ocupa toda la row
 
-const Card = ({ image, title, paragraph }) => {
+const Card = ({ image, title, paragraph, children }) => {
   const {
     wrapperStyle,
     containerStyle,
@@ -23,6 +23,7 @@ const Card = ({ image, title, paragraph }) => {
           <View style={textContainer}>
             <Text style={titleStyle}>{title}</Text>
             <Text style={paragraphStyle}>{paragraph}</Text>
+            {children}
           </View>
         </View>
       </View>
@@ -39,6 +40,7 @@ const styles = {
   },
   paragraphStyle: {
     fontSize: 18,
+    marginBottom: 25,
   },
 
   imageStyle: {
@@ -52,6 +54,7 @@ const styles = {
     alignItems: 'flex-start',
     justifyContent: 'center',
     marginLeft: 25,
+    marginRight: 25,
   },
 
   containerStyle: {
@@ -64,8 +67,6 @@ const styles = {
     justifyContent: 'center',
     flexDirection: 'row',
     alignItems: 'center',
-    marginRight: 5,
-    marginLeft: 5,
     height: 300,
     elevation: 3,
   },

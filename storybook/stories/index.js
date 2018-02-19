@@ -39,6 +39,19 @@ storiesOf('Card', module)
       />
     </View>
   ))
+  .add('with Image + button', () => (
+    <View>
+      <Card
+        image={require('../../src/assets/img/bannerImage.jpg')}
+        title="Title"
+        paragraph="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+      >
+        <SquareButton onPress={action('clicked-text')}>
+          <Text>BUTTON TEXT</Text>
+        </SquareButton>
+      </Card>
+    </View>
+  ))
 
 storiesOf('Banner', module)
   .add('image banner', () => (

@@ -9,6 +9,13 @@ import Services from './components/Services.js'
 import ImageBanner from './components/image_banner'
 import Row from './components/Row.js'
 import InfoBox from './components/info_box'
+import Card from './components/Card'
+import Carousel from './components/Carousel'
+import SquareButton from './components/square_button'
+import ButtonIcon from './components/Button_icon'
+
+import { Actions } from 'react-native-router-flux'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 const HotelOne = () => {
   return (
@@ -18,6 +25,47 @@ const HotelOne = () => {
         <StatusBar
           backgroundColor="rgba(11,92,148,0.8)"
           barStyle="light-content"
+        />
+
+        {/* button icon  */}
+        <ButtonIcon left={<Icon name="plane" size={23} color="white" />}>
+          TRANSPORTE HIGH CLASS
+        </ButtonIcon>
+
+        <ButtonIcon left="1">TRANSPORTE HIGH CLASS</ButtonIcon>
+
+        <ButtonIcon
+          left="2"
+          right={<Icon name="plane" size={28} color="white" />}
+        >
+          TRANSPORTE HIGH CLASS
+        </ButtonIcon>
+
+        <ButtonIcon>TRANSPORTE HIGH CLASS</ButtonIcon>
+
+        <Card
+          image={require('./assets/img/bannerImage.jpg')}
+          title="Title"
+          paragraph="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+        >
+          <SquareButton onPress={Actions.HotelOne()}>BUTTON TEXT</SquareButton>
+        </Card>
+
+        <Carousel
+          items={[
+            {
+              key: 'page0',
+              image: require('./assets/img/bannerImage.jpg'),
+            },
+            {
+              key: 'page2',
+              image: require('./assets/img/bannerImage.jpg'),
+            },
+            {
+              key: 'page3',
+              image: require('./assets/img/bannerImage.jpg'),
+            },
+          ]}
         />
 
         {/* info sections with three or two info boxes */}

@@ -5,6 +5,7 @@ import { TouchableOpacity, Text, View } from 'react-native'
 import Row from './Row'
 
 import Icon from 'react-native-vector-icons/FontAwesome'
+import { Actions } from 'react-native-router-flux'
 
 // este comando solucion error 500 en caso de aparecer
 // rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json
@@ -17,7 +18,10 @@ IndexElement = props => {
   return (
     <Row>
       <View style={{ flex: 0 }}>
-        <View style={containerStyle}>
+        <TouchableOpacity
+          onPress={() => Actions.HotelsIndex()}
+          style={containerStyle}
+        >
           <View style={leftContainer}>
             <Icon name="bus" size={size} color="black" />
             <Icon name="plane" size={size} color="black" />
@@ -29,9 +33,9 @@ IndexElement = props => {
             <Text>3 - Lorem Ipsum lorem</Text>
             <Text>4 - Lorem Ipsum lorem</Text>
           </View>
-        </View>
+        </TouchableOpacity>
 
-        <View style={containerStyle}>
+        <TouchableOpacity style={containerStyle}>
           <View style={leftContainer}>
             <Icon name="hotel" size={size} color="black" />
           </View>
@@ -42,9 +46,9 @@ IndexElement = props => {
             <Text>3 - Lorem Ipsum lorem</Text>
             <Text>4 - Lorem Ipsum lorem</Text>
           </View>
-        </View>
+        </TouchableOpacity>
 
-        <View style={containerStyle}>
+        <TouchableOpacity style={containerStyle}>
           <View style={leftContainer}>
             <Icon name="globe" size={size} color="black" />
           </View>
@@ -55,10 +59,10 @@ IndexElement = props => {
             <Text>3 - Lorem Ipsum lorem</Text>
             <Text>4 - Lorem Ipsum lorem</Text>
           </View>
-        </View>
+        </TouchableOpacity>
       </View>
       <View>
-        <View style={containerStyle}>
+        <TouchableOpacity style={containerStyle}>
           <View style={leftContainer}>
             <Icon name="paper-plane-o" size={size} color="black" />
             {/* <Icon name="male" size={size} color="black" /> */}
@@ -70,9 +74,9 @@ IndexElement = props => {
             <Text>3 - Lorem Ipsum lorem</Text>
             <Text>4 - Lorem Ipsum lorem</Text>
           </View>
-        </View>
+        </TouchableOpacity>
 
-        <View style={containerStyle}>
+        <TouchableOpacity style={containerStyle}>
           <View style={leftContainer}>
             <Icon name="tree" size={size} color="black" />
           </View>
@@ -83,9 +87,9 @@ IndexElement = props => {
             <Text>3 - Lorem Ipsum lorem</Text>
             <Text>4 - Lorem Ipsum lorem</Text>
           </View>
-        </View>
+        </TouchableOpacity>
 
-        <View style={containerStyle}>
+        <TouchableOpacity style={containerStyle}>
           <View style={leftContainer}>
             <Icon name="leaf" size={size} color="black" />
             {/* <Icon name="safari" size={size} color="black" />
@@ -98,7 +102,7 @@ IndexElement = props => {
             <Text>3 - Lorem Ipsum lorem</Text>
             <Text>4 - Lorem Ipsum lorem</Text>
           </View>
-        </View>
+        </TouchableOpacity>
       </View>
     </Row>
   )
