@@ -13,6 +13,7 @@ import Card from './components/Card'
 import Carousel from './components/Carousel'
 import SquareButton from './components/square_button'
 import ButtonIcon from './components/Button_icon'
+import CircleIcon from './components/CircleIcon'
 
 import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -26,6 +27,21 @@ const HotelOne = () => {
           backgroundColor="rgba(11,92,148,0.8)"
           barStyle="light-content"
         />
+
+        <Row>
+          <CircleIcon>
+            <Icon name="bus" size={70} color="white" />
+          </CircleIcon>
+          <CircleIcon>
+            <Icon name="tree" size={70} color="white" />
+          </CircleIcon>
+          <CircleIcon>
+            <Icon name="leaf" size={70} color="white" />
+          </CircleIcon>
+          <CircleIcon>
+            <Icon name="film" size={70} color="white" />
+          </CircleIcon>
+        </Row>
 
         {/* button icon  */}
         <ButtonIcon left={<Icon name="plane" size={23} color="white" />}>
