@@ -15,6 +15,7 @@ import SquareButton from './components/square_button'
 import ButtonIcon from './components/Button_icon'
 import CircleIcon from './components/CircleIcon'
 import RoundedCard from './components/RoundedCard'
+import SearchTitle from './components/SearchTitle'
 
 import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -28,6 +29,10 @@ const HotelOne = () => {
           backgroundColor="rgba(11,92,148,0.8)"
           barStyle="light-content"
         />
+
+        <SearchTitle>
+          ¿POR QUÉ ES TAN IMPORTANTE QUE TENGAS TU USUARIO?
+        </SearchTitle>
 
         <Row>
           <CircleIcon>
@@ -65,7 +70,7 @@ const HotelOne = () => {
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum
             dolor sit amet, consectetuer adipiscing elit.
           </RoundedCard>
-          <RoundedCard>Parrafo sólo texto</RoundedCard>
+          <RoundedCard>Párrafo sólo texto</RoundedCard>
         </Row>
 
         <Card
