@@ -10,6 +10,7 @@ import IndexElement from './src/components/index_element'
 import HotelsIndex from './src/HotelsIndex'
 import HotelOne from './src/HotelOne'
 import VideoComponent from './src/VideoComponent'
+import IndexView from './src/index.js'
 
 const Index = () => {
   return (
@@ -19,8 +20,8 @@ const Index = () => {
         <Scene key="StorybookUI" component={StorybookUI} title="StorybookUI" />
 
         <Scene key="HotelsIndex" component={HotelsIndex} title="Hoteles" />
-        <Scene key="HotelOne" component={HotelOne} title="" initial />
-        <Scene key="IndexElement" component={IndexElement} title="" />
+        <Scene key="HotelOne" component={HotelOne} title="" />
+        <Scene key="Index" component={IndexView} title="" initial />
         <Scene key="AppIndex" component={AppIndex} title="" />
         <Scene key="videoComponent" component={VideoComponent} title="Video" />
       </Scene>

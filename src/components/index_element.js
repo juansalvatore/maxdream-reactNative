@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { TouchableOpacity, Text, View } from 'react-native'
 
 import Row from './Row'
+import Column from './Column'
 
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { Actions } from 'react-native-router-flux'
@@ -14,104 +15,19 @@ import { Actions } from 'react-native-router-flux'
 
 IndexElement = props => {
   const { containerStyle, leftContainer, rightContainer } = styles
-  const size = 28
   return (
-    <Row>
-      <View style={{ flex: 0 }}>
-        <TouchableOpacity
-          onPress={() => Actions.HotelsIndex()}
-          style={containerStyle}
-        >
-          <View style={leftContainer}>
-            <Icon name="bus" size={size} color="black" />
-            <Icon name="plane" size={size} color="black" />
-          </View>
-          <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
-          <View style={rightContainer}>
-            <Text>1 - Lorem Ipsum lorem</Text>
-            <Text>2 - Lorem Ipsum lorem</Text>
-            <Text>3 - Lorem Ipsum lorem</Text>
-            <Text>4 - Lorem Ipsum lorem</Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={containerStyle}>
-          <View style={leftContainer}>
-            <Icon name="hotel" size={size} color="black" />
-          </View>
-          <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
-          <View style={rightContainer}>
-            <Text>1 - Lorem Ipsum lorem</Text>
-            <Text>2 - Lorem Ipsum lorem</Text>
-            <Text>3 - Lorem Ipsum lorem</Text>
-            <Text>4 - Lorem Ipsum lorem</Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={containerStyle}>
-          <View style={leftContainer}>
-            <Icon name="globe" size={size} color="black" />
-          </View>
-          <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
-          <View style={rightContainer}>
-            <Text>1 - Lorem Ipsum lorem</Text>
-            <Text>2 - Lorem Ipsum lorem</Text>
-            <Text>3 - Lorem Ipsum lorem</Text>
-            <Text>4 - Lorem Ipsum lorem</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-      <View>
-        <TouchableOpacity style={containerStyle}>
-          <View style={leftContainer}>
-            <Icon name="paper-plane-o" size={size} color="black" />
-            {/* <Icon name="male" size={size} color="black" /> */}
-          </View>
-          <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
-          <View style={rightContainer}>
-            <Text>1 - Lorem Ipsum lorem</Text>
-            <Text>2 - Lorem Ipsum lorem</Text>
-            <Text>3 - Lorem Ipsum lorem</Text>
-            <Text>4 - Lorem Ipsum lorem</Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={containerStyle}>
-          <View style={leftContainer}>
-            <Icon name="tree" size={size} color="black" />
-          </View>
-          <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
-          <View style={rightContainer}>
-            <Text>1 - Lorem Ipsum lorem</Text>
-            <Text>2 - Lorem Ipsum lorem</Text>
-            <Text>3 - Lorem Ipsum lorem</Text>
-            <Text>4 - Lorem Ipsum lorem</Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={containerStyle}>
-          <View style={leftContainer}>
-            <Icon name="leaf" size={size} color="black" />
-            {/* <Icon name="safari" size={size} color="black" />
-            <Icon name="paper-plane-o" size={size} color="black" /> */}
-          </View>
-          <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
-          <View style={rightContainer}>
-            <Text>1 - Lorem Ipsum lorem</Text>
-            <Text>2 - Lorem Ipsum lorem</Text>
-            <Text>3 - Lorem Ipsum lorem</Text>
-            <Text>4 - Lorem Ipsum lorem</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-    </Row>
+    <TouchableOpacity onPress={() => props.action()} style={containerStyle}>
+      <View style={leftContainer}>{props.icon}</View>
+      <View style={{ marginLeft: 20, width: 1, backgroundColor: '#ccc' }} />
+      <View style={rightContainer}>{props.children}</View>
+    </TouchableOpacity>
   )
 }
 
 const styles = {
   containerStyle: {
-    width: 370,
-    minHeight: 100,
+    flex: 1,
+    minHeight: 140,
     flexDirection: 'row',
     backgroundColor: '#ccc',
     justifyContent: 'center',
@@ -121,17 +37,15 @@ const styles = {
     borderRadius: 2,
     borderColor: '#ddd',
     backgroundColor: 'white',
-    marginRight: 5,
   },
   leftContainer: {
-    flex: 0.9,
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: 'white',
     borderRadius: 0,
     marginLeft: 25,
-    height: 120,
   },
   rightContainer: {
     flex: 4,

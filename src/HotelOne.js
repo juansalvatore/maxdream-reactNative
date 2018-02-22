@@ -31,7 +31,7 @@ const HotelOne = () => {
         />
 
         <SearchTitle>
-          ¿POR QUÉ ES TAN IMPORTANTE QUE TENGAS TU USUARIO?
+          ¿POR QUÉ ES TÁN IMPORTANTE QUE TENGAS TU USUARIO?
         </SearchTitle>
 
         <Row>
